@@ -28,7 +28,7 @@ def plot_variable_pairs(df, sample_size=100000, variables=None):
 def plot_categorical_and_continuous_vars(df):
 
     categorical_col = 'county_code'
-    continuous_cols = ['bedroom_count','bathroom_count','calc_sqr_feet', 'tax_value' , 'yearbuilt', 'taxamount']
+    continuous_cols = ['bedroom_count','bathroom_count','calc_sqr_feet', 'tax_value' , 'yearbuilt']
     for continuous_col in continuous_cols:
         plt.figure(figsize=(10, 4))
         

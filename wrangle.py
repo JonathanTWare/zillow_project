@@ -17,9 +17,10 @@ def new_zillow_data():
     conn = get_db_url('zillow')
 
     query = '''
-            SELECT bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, yearbuilt, taxamount, fips
-            FROM properties_2017
-            WHERE propertylandusetypeid = 261;  
+           SELECT p.bedroomcnt, p.bathroomcnt, p.calculatedfinishedsquarefeet,p.fips, p.yearbuilt, p.taxvaluedollarcnt
+            FROM properties_2017 p
+            JOIN predictions_2017 pr ON p.parcelid = pr.parcelid
+            WHERE p.propertylandusetypeid = 261;
             '''
 
     
@@ -42,7 +43,7 @@ def get_zillow_data():
 # -----------------------------prep--------------------------------
 def scale_data(train, validate, test):
     
-    numeric_cols = ['bedroom_count','bathroom_count','calc_sqr_feet','yearbuilt','taxamount']
+    numeric_cols = ['bedroom_count','bathroom_count','calc_sqr_feet','yearbuilt']
     
     train_scaled = train.copy()
     validate_scaled = validate.copy()
@@ -61,6 +62,7 @@ def scale_data(train, validate, test):
 def prep_zillow_data(df):
     
     df = df.dropna()
+    
     new_columns = {
         'bedroomcnt': 'bedroom_count',
         'bathroomcnt': 'bathroom_count',
@@ -70,6 +72,7 @@ def prep_zillow_data(df):
     }
     df = df.rename(columns=new_columns)
     df_encoded = pd.get_dummies(df['county_code'], prefix='is_county_code')
+    
     df = pd.concat([df, df_encoded], axis=1)
 
     
@@ -80,9 +83,11 @@ def prep_zillow_data(df):
         (df['bedroom_count'] >=3) &
         (df['bathroom_count'] <= 4) &
         (df['bathroom_count'] >= 2) &
-        (df['calc_sqr_feet'] <= 9000) &
+        (df['calc_sqr_feet'] <= 5000) &
         (df['yearbuilt'] >=1900) &
-        (df['taxamount'] <=120000)
+        (df['tax_value'] <=5000000) &
+        (df['tax_value'] >=50000)
+        
     ]
   
     
