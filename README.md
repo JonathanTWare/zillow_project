@@ -114,7 +114,7 @@ Further feature explore to see if error can be further improved.
 ## <a name="stats"></a>Statistical Analysis
 [[Back to top](#top)]
 
-### Stats Test: Pearson's R
+### Stats Test 1: Pearson's R
 
 Pearson's correlation coefficient (Pearson's R) is a statistical measure used to assess the strength and direction of the linear relationship between two continuous variables.
 
@@ -125,25 +125,43 @@ To calculate Pearson's R in Python, we can use the corrcoef function from the nu
 
 ### Hypothesis
 
-In summary, the hypotheses for the independent t-test and chi2 test can be stated as follows:
+In summary, the hypotheses for the PearsonsR test can be stated as follows:
 
-Null Hypothesis (H0): Tenure does not have an association with churn.
-Alternative Hypothesis (H1): Tenure associated with churn.
+### 1st Hypothesis
+
+Null Hypothesis (H0): bathroom_count does not have a correlation with tax_value.
+Alternative Hypothesis (H1): bathroom_count has a correlation with tax_value.
 
 ### 2nd Hypothesis
 
-Null Hypothesis (H0): Monthly charges is not associated with churn.
-Alternative Hypothesis (H1): Monthly charges is associated with churn.
+Null Hypothesis (H0): bedroom_count does not have a correlation with tax_value.
+Alternative Hypothesis (H1): bedroom_count has a correlation with tax_value.
 
 ### 3rd Hypothesis
 
-Null Hypothesis (H0): Total charges is not associated with churn.
-Alternative Hypothesis (H1): Total charges is associated with churn.
+Null Hypothesis (H0): yearbuilt does not have a correlation with tax_value.
+Alternative Hypothesis (H1): yearbuilt has a correlation with tax_value.
 
 ### 4th Hypothesis
 
-Null Hypothesis (H0): Sex is independent of churn.
-Alternative Hypothesis (H1): Sex is dependent of churn.
+Null Hypothesis (H0): calc_sqr_ft does not have a correlation with tax_value.
+Alternative Hypothesis (H1): calc_sqr_ft has a correlation with tax_value.
+
+
+### Stats Test 1: Independent T=Test
+
+The independent t-test is a statistical method used to examine the association between a categorical variable and a continuous variable.
+
+By using the independent t-test, we aim to determine whether there is a significant association between the both one categorical variable and a continuous variable. 
+
+
+### 5th Hypothesis
+
+Null Hypothesis (H0): county_code is not associated with tax_value.
+Alternative Hypothesis (H1): county_codeis associated with tax_value.
+
+### 6th Hypothesis
+
 
 #### Confidence level and alpha value:
 - I established a 95% confidence level
@@ -227,7 +245,7 @@ bathroom_count and calc_sqr_ft have a moderate correlation with the target(tax_v
 ### Use Table below as a template for all Modeling results for easy comparison:
 
 |model |	RMSE_train |	RMSE_validate	| R_Validate|
-   | ---- | ----| ---- | ---- | 
+| ---- | ----| ---- | ---- | 
 |mean_baseline|	433865.92|	428222.25|	0.000000	|
 |OLS	|369926.63	|364517.28|	0.275380|
 |LassoLars	|369926.65	|364515.70|	0.275386|	
