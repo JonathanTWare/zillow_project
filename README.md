@@ -18,7 +18,7 @@ ___
 
 ## <a name="project_description"></a>Project Description:
 
-In this project we will be using the Telco Data Set. Exploring the data, we will find features that are correlated with Property Tax Assesed Values (taxvaluedollarcnt)using PearsonsR, in order to run features through a model that will predict the Property Tax Assessed Values. The goal is to beat baseline using one of the four regression models: Linear Regression(OLS), LassoLars, TweedieRegressor(GLM), and Polynomial Regression.
+In this project we will be using the Zillow Data Set. Exploring the data, we will find features that are correlated and associated with Property Tax Assesed Values (tax_value_)using PearsonsR, and T-Test in order to run features through a model that will predict the Property Tax Assessed Values. The goal is to beat baseline using one of the four regression models: Linear Regression(OLS), LassoLars, TweedieRegressor(GLM), and Polynomial Regression.
 
 [[Back to top](#top)]
 
