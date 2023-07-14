@@ -275,7 +275,7 @@ bathroom_count and calc_sqr_ft have a moderate correlation with the target(tax_v
 
 ## <a name="conclusion"></a>Conclusion:
 
-#### Based on the information provided, it seems that the Polynomial Regression model has the lowest RMSE at 35,9127.93 , which is 18% better than baseline. 
+#### Based on the information provided, it seems that the Polynomial Regression model has the lowest RMSE at 359,127.93 , which is 17% better than baseline. 
 #### 
 #### On the other hand, the LassoLars and Linear Regression models had a slightly lower error reduction at 15% better than baseline.
 #### 
