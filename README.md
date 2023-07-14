@@ -165,8 +165,6 @@ By using the independent t-test, we aim to determine whether there is a signific
 Null Hypothesis (H0): county_code is not associated with tax_value.
 Alternative Hypothesis (H1): county_codeis associated with tax_value.
 
-### 6th Hypothesis
-
 
 #### Confidence level and alpha value:
 - I established a 95% confidence level
@@ -180,9 +178,10 @@ Alternative Hypothesis (H1): county_codeis associated with tax_value.
 | bedroom_count|0.12 |weak |
 | calc_sqr_ft |0.48  | moderate |
 | yearbuilt |  0.07      |  weak     |
-|is_county_code_6037.0|- 0.07	|weak	|
-|is_county_code_6059.0| 0.08 | weak |
-|is_county_code_6111.0|- 0.01 | weak  |
+
+| Feature | P-Value Value |
+| ---- | ---- |
+| county_code | 0 |
 
 
 #### Summary: 
