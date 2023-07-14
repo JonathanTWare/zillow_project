@@ -179,7 +179,7 @@ Alternative Hypothesis (H1): county_codeis associated with tax_value.
 | calc_sqr_ft|0 |0.48  | moderate |
 | yearbuilt | 1.31e-23 |0.07      |  weak     |
 
-| Feature | P-Value Value |
+| Feature | P-Value |
 | ---- | ---- |
 | county_code | 0 |
 
