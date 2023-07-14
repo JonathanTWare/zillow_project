@@ -59,11 +59,7 @@ Further feature explore to see if error can be further improved.
 [[Back to top](#top)]
 
 
- 'bedroomcnt': 'bedroom_count',
-        'bathroomcnt': 'bathroom_count',
-        'calculatedfinishedsquarefeet': 'calc_sqr_feet',
-        'taxvaluedollarcnt': 'tax_value',
-        'fips': 'county_code'
+ 
 
 ***
 
@@ -88,6 +84,15 @@ Further feature explore to see if error can be further improved.
 
 
 ### Wrangle steps: 
+- renamed columns to be more readable:
+
+|original name| rename|
+| ---- | ---- |
+|bedroomcnt| bedroom_count|
+|bathroomcnt| bathroom_count|
+|calculatedfinishedsquarefeet | calc_sqr_feet|
+|taxvaluedollarcnt|tax_value|
+|fips | county_code|
 - dropped unwanted columns.
 - created dummies for certain features
 - created function to acquire and prep data
