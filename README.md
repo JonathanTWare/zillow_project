@@ -172,12 +172,12 @@ Alternative Hypothesis (H1): county_codeis associated with tax_value.
 
 #### Results:
 
-| Feature | Corellation Value | Correlation Strength|
-| ---- | ---- | ---- |
-| bathroom_count|0.40  |moderate |
-| bedroom_count|0.12 |weak |
-| calc_sqr_ft |0.48  | moderate |
-| yearbuilt |  0.07      |  weak     |
+| Feature | P-Value Value | Corellation Value | Correlation Strength|
+| ---- | ---- | ---- | ---- |
+| bathroom_count| 0 |0.40  |moderate |
+| bedroom_count|1.41 |0.12 |weak |
+| calc_sqr_ft|0 |0.48  | moderate |
+| yearbuilt | 1.31 |0.07      |  weak     |
 
 | Feature | P-Value Value |
 | ---- | ---- |
